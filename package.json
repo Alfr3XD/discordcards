@@ -1,0 +1,11 @@
+{
+  "name": "discordcards",
+  "version": "1.0.0",
+  "description": "Una librería de tarjetas personalizadas para bots de discord con canvas y jimp",
+  "main": "main.js",
+  "scripts": {
+    "test": "nodemon test"
+  },
+  "author": "Alfr3XD",
+  "license": "MIT"
+}
