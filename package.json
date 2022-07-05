@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Una librería de tarjetas personalizadas para bots de discord con canvas y jimp",
   "main": "sources/main.js",
-  "types": "sources/typings/index.d.ts",
+  "types": "sources/typings/main.d.ts",
   "scripts": {
     "test": "nodemon test/LoadImage.js"
   },
