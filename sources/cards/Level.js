@@ -32,19 +32,19 @@ class Level {
      * }} [data]? Recomiendo hacerlo con los métodos.
      */
     constructor(data) {
-        this.username = data?.username || "Username#0000";
-        this.nickname = data?.nickname || "@developer";
-        this.rank = data?.rank || 1;
-        this.level = data?.level || 1;
-        this.xp = data?.xp || { current: 30, max: 100 };
-        this.colors = data?.colors || { bar: "#ffffff", stroke: "#ffffff", username: "#ffffff", nickname: "#ffffff", rank: "#ffffff", level: "#ffffff", xp: "#ffffff" };
-        this.images = data?.images || { avatar: "https://i.pinimg.com/736x/c6/a8/5f/c6a85f7dbcbf367d5dc1baa2aaa19a73.jpg", background: "https://img.freepik.com/foto-gratis/fondo-azul-degradado-lujo-abstracto-azul-oscuro-liso-banner-estudio-vineta-negra_1258-52379.jpg" };
-        this.blur = data?.blur || 4;
-        this.radius = data?.radius || 25;
+        this.username   = data?.username    || "Username#0000";
+        this.nickname   = data?.nickname    || "@developer";
+        this.rank       = data?.rank        || 1;
+        this.level      = data?.level       || 1;
+        this.xp         = data?.xp          || { current: 30, max: 100 };
+        this.colors     = data?.colors      || { bar: "#ffffff", stroke: "#ffffff", username: "#ffffff", nickname: "#ffffff", rank: "#ffffff", level: "#ffffff", xp: "#ffffff" };
+        this.images     = data?.images      || { avatar: "https://i.pinimg.com/736x/c6/a8/5f/c6a85f7dbcbf367d5dc1baa2aaa19a73.jpg", background: "https://img.freepik.com/foto-gratis/fondo-azul-degradado-lujo-abstracto-azul-oscuro-liso-banner-estudio-vineta-negra_1258-52379.jpg" };
+        this.blur       = data?.blur        || 4;
+        this.radius     = data?.radius      || 25;
 
-        this.levelText = "Level {level}";
-        this.xpText = "XP: {current} / {max}";
-        this.rankText = "#{rank}";
+        this.levelText  = "Level {level}";
+        this.xpText     = "XP: {current} / {max}";
+        this.rankText   = "#{rank}";
     }
 
     /**
@@ -149,7 +149,7 @@ class Level {
         if(blur) this.blur = blur;
         return this;
     }
-
+    /** Construye la tarjeta de niveles */
     async render() {
         var font = "fredoka"
         registerFont(__dirname + "../../../resources/fonts/FredokaOne-Regular.ttf", { family: font });
