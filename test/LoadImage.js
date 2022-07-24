@@ -3,10 +3,9 @@ const { join } = require('path');
 const discordcards = require('../sources/main');
 
 async function Main() {
-    const card = new discordcards.LevelCard()
-    .setLevel(10, "#ffffff", "Nivel {level}")
-    .setCurrentBarColor([{hex: "#fc1100", position: 0}, {hex: "#00ff00", position: 1}])
-    .setXp(1123, 1541)
+    const card = new discordcards.MemberCard()
+    .setBox(false)
+    
     return await card.render()
 }
 Main()

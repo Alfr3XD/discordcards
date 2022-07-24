@@ -37,8 +37,12 @@ export type CardLevelData = {
         xp: string
     },
     images?: { avatar: string, background: string },
+    fonts?: {usernameFont: string, nicknameFont: string, rankFont: string, levelFont: string, xpFont: string}[],
     blur?: number,
-    radius?: number
+    radius?: number,
+    levelText?: string,
+    rankText?: string,
+    xpText?: string,
 }
 /**
 * Modifica una tarjeta de rankin o niveles de un usuario.
@@ -60,6 +64,11 @@ export class LevelCard {
      * @param data Recomiendo hacerlo con los métodos.
      */
     constructor(data?: CardLevelData);
+
+    /**
+    * @param font Datos de la fuente de letra
+    */
+    public registerFont(font: {path: string, options: { family: string, weight?: string, style?: string }}[]): this
     /**
      * @param username nombre del usuario
      * @param color color del nombre del usuario
@@ -104,5 +113,5 @@ export class LevelCard {
      */
     public setBackground(background: string, blur: number): this
     /** Construye la tarjeta de niveles */
-    public async render(): Promise<Buffer>    
+    public render(): Promise<Buffer>    
 }
