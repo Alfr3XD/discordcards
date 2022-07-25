@@ -1,4 +1,4 @@
-## DISCORDCARDS ⭐
+# DISCORDCARDS ⭐
 Una librería de imágenes manipualadas con canvas para tus aplicaciones de discord.
 # INSTALACIÓN 📁
 ```sh
@@ -25,63 +25,88 @@ npm i discordcards
 | parámetro | type | opcional | descripción|
 |--|--|--|--|
 | font | array |  | Datos de la fuente de letra |
+
+
 `returns: MemberCard`
 
 .setUsername(username, color, font)
-| parámetro | type | opcional | descripción|
+
+| parámetro | type | opcional | descripción |
 |--|--|--|--|
-| username | string |  | Nombre de usuario |
+| username | string | Nombre de usuario |
 | color | string | ✓ | El color del texto |
 | font | string | ✓  | La fuente de letra |
+
+
 `returns: MemberCard`
 
 .setTitle(title, color, font)
+
 | parámetro | type | opcional | descripción|
 |--|--|--|--|
-| title | string |  | Título de la tarjeta |
+| title | string | Título de la tarjeta |
 | color | string | ✓ | El color del texto |
 | font | string | ✓  | La fuente de letra |
+
+
 `returns: MemberCard`
 
 .setDescription(description, color, font)
+
 | parámetro | type | opcional | descripción|
 |--|--|--|--|
 | description | string |  | Descripción de la tarjeta |
 | color | string | ✓ | El color del texto |
 | font | string | ✓  | La fuente de letra |
+
+
 `returns: MemberCard`
 
 .setMemberCount(memberCount, color, font)
+
 | parámetro | type | opcional | descripción|
 |--|--|--|--|
 | memberCount | string |  | El contador de miembros |
 | color | string | ✓ | El color del texto |
 | font | string | ✓  | La fuente de letra |
+
+
 `returns: MemberCard`
 
 .setBackground(background, blur, radius)
+
 | parámetro | type | opcional | descripción|
 |--|--|--|--|
 | background | string |  | URL de la imágen de fondo |
 | blur | number | ✓ | El difuminado del fondo |
 | radius | string | ✓  | La intensidad del borde de la tarjeta |
+
+
 `returns: MemberCard`
 
 .setAvatar(avatar, color)
+
 | parámetro | type | opcional | descripción|
 |--|--|--|--|
 | avatar | string |  | URL del avatar del usuario |
 | color | string | ✓ | Color del aro del usuario |
+
+
 `returns: MemberCard`
 
 .setBox(box, color)
+
 | parámetro | type | opcional | descripción|
 |--|--|--|--|
 | box | boolean |  | Una caja de fondo |
 | color | string | ✓ | Color de la caja |
+
+
 `returns: MemberCard`
 
 .render()
+
+
 `returns: Promise<Buffer>`
 
 # *`TYPEDEF`* **CardMemberData**
