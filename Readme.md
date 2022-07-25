@@ -2,8 +2,10 @@
 Una librería de imágenes manipualadas con canvas para tus aplicaciones de discord.
 # INSTALACIÓN 📁
 ```sh
-npm i discordcards
+npm i @alfr3xd/discordcards
 ```
+[![NPM](https://nodei.co/npm/@alfr3xd/discordcards.png)](https://nodei.co/npm/@alfr3xd/discordcards/)
+
 ## DOCUMENTACIÓN 📄
 | Clases | Constructor |
 |--|--|
