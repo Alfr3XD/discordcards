@@ -176,12 +176,15 @@ class Level {
     /**
      * @param {string} background url de la imagen de fondo
      * @param {number} [blur] cambia el desenfocado de la imágen de fondo
+     * @param {number} [radius] cambia la intensidad del curveado de la imágen de fondo
      */
-    setBackground(background, blur) {
+    setBackground(background, blur, radius) {
         if(typeof background !== "string") throw new Error(`El background no está ingresado en tipo string, en su lugar se ingresó: ${typeof background}`);
         this.images.background = background;
         if(typeof blur !== "number") throw new Error(`El blur no está ingresado en tipo number, en su lugar se ingresó: ${typeof blur}`);
         if(blur) this.blur = blur;
+        if(typeof radius !== "number") throw new Error(`El radius no está ingresado en tipo number, en su lugar se ingresó: ${typeof radius}`);
+        if(radius) this.radius = radius;
         return this;
     }
     /** Construye la tarjeta de niveles */

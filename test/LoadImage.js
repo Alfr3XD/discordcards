@@ -3,8 +3,7 @@ const { join } = require('path');
 const discordcards = require('../sources/main');
 
 async function Main() {
-    const card = new discordcards.MemberCard()
-    .setBox(false)
+    const card = new discordcards.LevelCard()
     
     return await card.render()
 }

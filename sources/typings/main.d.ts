@@ -49,7 +49,7 @@ export type CardLevelData = {
         xp: string
     },
     images?: { avatar: string, background: string },
-    fonts?: {usernameFont: string, nicknameFont: string, rankFont: string, levelFont: string, xpFont: string}[],
+    fonts?: {usernameFont: string, nicknameFont: string, rankFont: string, levelFont: string, xpFont: string},
     blur?: number,
     radius?: number,
     levelText?: string,
@@ -127,8 +127,9 @@ export class LevelCard {
     /**
      * @param background url de la imagen de fondo
      * @param blur cambia el desenfocado de la imágen de fondo
+     * @param radius cambia el radio de la imágen de fondo
      */
-    public setBackground(background: string, blur?: number): this
+    public setBackground(background: string, blur?: number, radius?: number): this
     /** Construye la tarjeta de niveles */
     public render(): Promise<Buffer>    
 }
