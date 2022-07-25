@@ -13,7 +13,7 @@ npm i discordcards
 
 | Funciones | Parámetros|
 |--|--|
-| fillRoundRect | `ctx: CanvasRenderingContext2D` `x: number` `y: number` `w: number` `h: number` `r: number | {tl: number, tr: number, br: number, bl: number}` `f?: boolean` `s?: boolean`
+| fillRoundRect | `ctx: CanvasRenderingContext2D` `x: number` `y: number` `w: number` `h: number` `r: number - {tl: number, tr: number, br: number, bl: number}` `f?: boolean` `s?: boolean`
 | abbreviateNumber | `value: number` |
 | circleImage | `ctx: CanvasRenderingContext2D` `x: number` `y: number` `w: number` `h: number` `f?: boolean` `s?: boolean` |
 
