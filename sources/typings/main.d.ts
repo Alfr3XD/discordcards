@@ -84,32 +84,37 @@ export class LevelCard {
     /**
      * @param username nombre del usuario
      * @param color color del nombre del usuario
+     * @param font fuente del nombre del usuario
      */
-    public setUsername(username: string, color: string): this
+    public setUsername(username: string, color?: string, font?: string): this
     /**
      * @param nickname nickname del usuario
      * @param color color del nickname del usuario
+     * @param font fuente del nickname del usuario
     */
-    public setNickname(nickname: string, color: string): this
+    public setNickname(nickname: string, color?: string, font?: string): this
     /**
-     * @param {number | string} rank rank del usuario
-     * @param {string} [color] color del rank del usuario
-     * @param {string} [text] texto del rank del usuario
+     * @param rank rank del usuario
+     * @param color del rank del usuario
+     * @param text texto del rank del usuario
+     * @param font fuente del rank del usuario
      */
-    public setRank(rank: number, color: string, text: string): this
+    public setRank(rank: number, color?: string, text?: string, font?: string): this
     /**
      * @param level nivel del usuario
      * @param color color del nivel del usuario
      * @param text texto del nivel del usuario
+     * @param font fuente del nivel del usuario
      */
-    public setLevel(level: number, color: string, text: string): this
+    public setLevel(level: number, color?: string, text?: string, font?: string): this
     /**
      * @param xp experiencia actual del usuario
      * @param max experiencia requerida
      * @param color color del xp del usuario
      * @param text texto del xp del usuario
+     * @param font fuente del xp del usuario
      */
-    public setXp(xp: number, max: number, color: string, text:string): this
+    public setXp(xp: number, max: number, color?: string, text?:string, font?: string): this
     /**
      * @param color 
      */
@@ -118,12 +123,12 @@ export class LevelCard {
      * @param avatar url de la imagen de avatar
      * @param color color del borde de la imagen de avatar
      */
-    public setAvatar(avatar: string, color: string): this
+    public setAvatar(avatar: string, color?: string): this
     /**
      * @param background url de la imagen de fondo
      * @param blur cambia el desenfocado de la imágen de fondo
      */
-    public setBackground(background: string, blur: number): this
+    public setBackground(background: string, blur?: number): this
     /** Construye la tarjeta de niveles */
     public render(): Promise<Buffer>    
 }
@@ -210,19 +215,19 @@ export class MemberCard {
      * @param blur cambia el desenfocado de la imágen de fondo
      * @param radius cambia el radio de la imágen de fondo
      */
-    setBackground(background: string, blur: number, radius: number): this
+    setBackground(background: string, blur?: number, radius?: number): this
 
     /**
      * @param avatar url de la imagen de avatar
      * @param color color del borde de la imagen de avatar
      */
-     setAvatar(avatar: string, color: string): this
+     setAvatar(avatar: string, color?: string): this
 
     /**
      * @param box activa o desactiva el borde de la tarjeta 
      * @param color color de la caja
      */
-    setBox(box: boolean, color: string): this
+    setBox(box: boolean, color?: string): this
 
     /** Construye la tarjeta de niveles */
     public render(): Promise<Buffer>  
