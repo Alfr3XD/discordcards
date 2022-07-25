@@ -179,6 +179,7 @@ class MemberCard {
             ctx.fillStyle = this.colors.box;
             ctx.globalAlpha = 0.5;
             fillRoundRect(ctx, 63, 50, 1134, 520, 10, true);
+            ctx.globalAlpha = 1;
             ctx.fillStyle = this.colors.memberCount;
             ctx.font = "45px " + this.fonts.memberCountFont;
             ctx.textAlign = "right";
