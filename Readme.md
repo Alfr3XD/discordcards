@@ -11,6 +11,8 @@ npm i @alfr3xd/discordcards
 |--|--|
 | MemberCard | `CardMemberData` |
 | LevelCard | `CardLevelData` |
+| Ranking | `RankingData` |
+
 
 
 | Funciones | Parámetros|
@@ -19,6 +21,7 @@ npm i @alfr3xd/discordcards
 | abbreviateNumber | `value: number` |
 | circleImage | `ctx: CanvasRenderingContext2D` `x: number` `y: number` `w: number` `h: number` `f?: boolean` `s?: boolean` |
 
+
 ` Pronto habrán más módulos para tus aplicaciones`
 
 # *`CLASS`* **LevelCard:**
@@ -26,7 +29,7 @@ npm i @alfr3xd/discordcards
  
 | parámetro | type | opcional | descripción|
 |--|--|--|--|
-| font | array |  | | Datos de la fuente de letra |
+| font | array |   | Datos de la fuente de letra |
 
 
 `returns: LevelCard`
@@ -119,7 +122,7 @@ npm i @alfr3xd/discordcards
 
 `returns: Promise<Buffer>`
 
-![MemberCardImage](https://media.discordapp.net/attachments/950886048198705222/1001163315101311027/Image.png)
+![LevelCardImage](https://media.discordapp.net/attachments/950886048198705222/1001163315101311027/Image.png)
 
 # *`CLASS`* **MemberCard:**
 .registerFonts(font)
@@ -213,6 +216,52 @@ npm i @alfr3xd/discordcards
 
 ![MemberCardImage](https://media.discordapp.net/attachments/950886048198705222/1001161160646738001/Image.png)
 
+
+# *`CLASS`* **Ranking:**
+.registerFonts(font)
+ 
+| parámetro | type | opcional | descripción|
+|--|--|--|--|
+| font | array |   | Datos de la fuente de letra |
+
+
+`returns: Ranking`
+
+.setColors(colors)
+
+| parámetro | type | opcional | descripción|
+|--|--|--|--|
+| colors | RankingData#colors |   | Colores de los textos |
+
+
+`returns: Ranking`
+
+
+.setFonts(fonts)
+
+| parámetro | type | opcional | descripción|
+|--|--|--|--|
+| fonts | RankingData#fonts |   | Fuentes de letra de los textos |
+
+
+`returns: Ranking`
+
+.setUsersData(usersData)
+
+| parámetro | type | opcional | descripción|
+|--|--|--|--|
+| usersData | RankingData#usersData |   | Datos de los usuarios |
+
+
+`returns: Ranking`
+
+.render()
+
+
+`returns: Promise<Buffer>`
+
+![RankingImage](https://media.discordapp.net/attachments/950886048198705222/1002390232546672770/Image.png?width=605&height=663)
+
 # *`TYPEDEF`* **CardMemberData**
 
 ```ts
@@ -273,5 +322,34 @@ npm i @alfr3xd/discordcards
  levelText?: string,
  rankText?: string,
  xpText?: string
+}
+```
+
+# *`TYPEDEF`* **RankingData**
+```ts
+{
+ colors?: {
+  box: string,
+  username: string,
+  xp: string,
+  level: string,
+  firstRank: string,
+  secondRank: string,
+  thirdRank: string
+ },
+ fonts?: {
+  username: string,
+  xp: string,
+  level: string,
+  ranks: string
+ },
+ usersData?: {
+  avatar: string,
+  tag: string,
+  level: number,
+  xp: number,
+  max_xp: number,
+  top: number
+ }[]
 }
 ```

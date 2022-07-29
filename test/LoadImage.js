@@ -3,7 +3,7 @@ const { join } = require('path');
 const discordcards = require('../sources/main');
 
 async function Main() {
-    const card = new discordcards.LevelCard()
+    const card = new discordcards.Ranking()
     
     return await card.render()
 }

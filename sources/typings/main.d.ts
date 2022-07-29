@@ -222,7 +222,7 @@ export class MemberCard {
      * @param avatar url de la imagen de avatar
      * @param color color del borde de la imagen de avatar
      */
-     setAvatar(avatar: string, color?: string): this
+    setAvatar(avatar: string, color?: string): this
 
     /**
      * @param box activa o desactiva el borde de la tarjeta 
@@ -232,4 +232,38 @@ export class MemberCard {
 
     /** Construye la tarjeta de niveles */
     public render(): Promise<Buffer>  
+}
+
+export type RankingData = {
+    colors?: {
+        box: string,
+        username: string,
+        xp: string,
+        level: string,
+        firstRank: string,
+        secondRank: string,
+        thirdRank: string
+    },
+    fonts?: {
+        username: string,
+        xp: string,
+        level: string,
+        ranks: string
+    },
+    usersData?: {
+        avatar: string,
+        tag: string,
+        level: number,
+        xp: number,
+        max_xp: number,
+        top: number
+    }[]
+}
+export class Ranking {
+    constructor(data?: RankingData);
+    public registerFont(font: {path: string, options: { family: string, weight?: string, style?: string }}[]): this
+    public setColors(colors: { box: string, username: string, xp: string, level: string, firstRank: string, secondRank: string, thirdRank: string }): this
+    public setFonts(fonts: { username: string, xp: string, level: string, ranks: string }): this
+    public setUsersData(usersData: {avatar: string, tag: string, level: number, xp: number, max_xp: number, top: number}[]): this
+    public render(): Promise<Buffer>
 }
