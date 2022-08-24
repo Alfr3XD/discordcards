@@ -1,6 +1,6 @@
 {
   "name": "@alfr3xd/discordcards",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Una librería de tarjetas personalizadas para bots de discord con canvas y jimp",
   "main": "sources/main.js",
   "types": "sources/typings/main.d.ts",

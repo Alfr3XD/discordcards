@@ -88,7 +88,7 @@ class Level {
      * @param {string} [font] Fuente de letra
     */
     setNickname(nickname, color, font) {
-        if(typeof username !== "string") throw new Error(`El apodo /*nickname/* no está ingresado en tipo string, en su lugar se ingresó: ${typeof nickname}`);
+        if(typeof nickname !== "string") throw new Error(`El apodo /*nickname/* no está ingresado en tipo string, en su lugar se ingresó: ${typeof nickname}`);
         this.nickname = nickname;
         if(color) this.colors.nickname = color;
         if(font) this.fonts.nicknameFont = font;
